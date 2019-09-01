@@ -21,8 +21,8 @@ export default class Lock extends React.PureComponent {
 						src={ require('../../static/images/lock-opened.png') }
 					/>
 					<img 
-						className="figure closed"
-						src={ require('../../static/images/lock-closed.png') }
+						className="closer"
+						src={ require('../../static/images/lock-closer-fr.png') }
 					/>
 				</div>
 				<img 

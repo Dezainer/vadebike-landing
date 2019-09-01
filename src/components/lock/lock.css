@@ -27,6 +27,18 @@
 	opacity: 0;
 }
 
+.lock .wrapper .closer {
+	position: absolute;
+	width: 41vw;
+	left: 28.5%;
+	bottom: -43%;
+	transform: translate(-50%, -50%);
+	transition: all 0.4s ease-in-out;
+}
+.lock.opened .wrapper .closer {
+	transform: translate(-50%, -50%) rotate(70deg);
+}
+
 .lock .qr {
 	width: 15vw;
 	position: absolute;
