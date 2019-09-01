@@ -1,4 +1,5 @@
 import React from 'react'
+import './lock.css'
 import LockService from '../../services/lockService'
 
 export default class Lock extends React.PureComponent {
@@ -13,8 +14,21 @@ export default class Lock extends React.PureComponent {
 
 	render() {
 		return (
-			<div>
-				{ this.state.opened ? 'opened' : 'closed' }
+			<div className={ `lock ${ this.state.opened ? 'opened' : '' }` }>
+				<div className="wrapper">
+					<img 
+						className="figure"
+						src={ require('../../static/images/lock-opened.png') }
+					/>
+					<img 
+						className="figure closed"
+						src={ require('../../static/images/lock-closed.png') }
+					/>
+				</div>
+				<img 
+					className="qr"
+					src={ require('../../static/images/lock-qr.svg') }
+				/>
 			</div>
 		)
 	}
