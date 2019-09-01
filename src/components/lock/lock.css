@@ -1,0 +1,48 @@
+.lock {
+	width: 100%;
+	height: 100vh;
+	background: #fcf7f8;
+}
+
+.lock .wrapper {
+	width: 80vw;
+	height: 100%;
+	margin-left: 96px;
+	position: relative;
+}
+
+.lock .wrapper .figure {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 1;
+}
+
+.lock .wrapper .figure.closed {
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+
+.lock.opened .wrapper .figure.closed {
+	opacity: 0;
+}
+
+.lock .wrapper .closer {
+	position: absolute;
+	width: 41vw;
+	left: 28.5%;
+	bottom: -43%;
+	transform: translate(-50%, -50%);
+	transition: all 0.4s ease-in-out;
+}
+.lock.opened .wrapper .closer {
+	transform: translate(-50%, -50%) rotate(70deg);
+}
+
+.lock .qr {
+	width: 15vw;
+	position: absolute;
+	top: 50%;
+	right: 25vw;
+	transform: translate(50%, -50%);
+}
